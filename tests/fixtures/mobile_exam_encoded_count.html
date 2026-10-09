@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- Synthetic questions and identifiers, matching the observed mobile form layout. -->
+<html><head><meta charset="utf-8"><title>测验</title></head><body>
+<h3 class="chapter-title">编码题数回归测试</h3>
+<form name="form1" id="form1" method="post">
+  <input type="hidden" name="workAnswerId" id="workAnswerId" value="12345">
+  <input type="hidden" name="workRelationId" id="workRelationId" value="67890">
+  <input type="hidden" name="totalQuestionNum" id="totalQuestionNum" value="abcdef0123456789abcdef0123456789">
+  <input type="hidden" name="enc_work" value="offline-enc">
+  <input type="hidden" name="fullScore" value="100.0">
+  <input type="hidden" name="workTimesEnc" value="offline-times">
+  <input type="hidden" name="answerwqbid" id="answerwqbid">
+  <div class="zquestions">
+    <div class="Py-mian1" data="101"><div>
+      <div class="Py-m1-title"><span class="quesType">1. [单选题]（25分）</span><div class="workTextWrap">单选测试</div></div>
+      <input class="answerInput" id="answer101" name="answer101" value="">
+      <input id="answertype101" name="answertype101" value="0">
+      <ul class="answerList">
+        <li><em id-param="A">A.</em><p><cc>甲</cc></p></li>
+        <li><em id-param="B">B.</em><p><cc>乙</cc></p></li>
+        <li><em id-param="C">C.</em><p><cc>丙</cc></p></li>
+        <li><em id-param="D">D.</em><p><cc>丁</cc></p></li>
+      </ul>
+    </div></div>
+    <div class="Py-mian1" data="102"><div>
+      <div class="Py-m1-title"><span class="quesType">2. [判断题]（25分）</span><div class="workTextWrap">判断测试一</div></div>
+      <input class="answerInput" id="answer102" name="answer102" value="">
+      <input id="answertype102" name="answertype102" value="3">
+      <ul class="answerList"><li val-param="true"><p>正确</p></li><li val-param="false"><p>错误</p></li></ul>
+    </div></div>
+    <div class="Py-mian1" data="103"><div>
+      <div class="Py-m1-title"><span class="quesType">3. [判断题]（25分）</span><div class="workTextWrap">判断测试二</div></div>
+      <input class="answerInput" id="answer103" name="answer103" value="">
+      <input id="answertype103" name="answertype103" value="3">
+      <ul class="answerList"><li val-param="true"><p>正确</p></li><li val-param="false"><p>错误</p></li></ul>
+    </div></div>
+    <div class="Py-mian1" data="104"><div>
+      <div class="Py-m1-title"><span class="quesType">4. [多选题]（25分）</span><div class="workTextWrap"><p>多选测试</p></div></div>
+      <input class="answerInput" id="answers104" name="answer104" value="">
+      <input id="answertype104" name="answertype104" value="1">
+      <ul class="answerList">
+        <li><em id-param="A">A.</em><p><cc>甲</cc></p></li>
+        <li><em id-param="B">B.</em><p><cc>乙</cc></p></li>
+        <li><em id-param="C">C.</em><p><cc>丙</cc></p></li>
+        <li><em id-param="D">D.</em><p><cc>丁</cc></p></li>
+      </ul>
+    </div></div>
+  </div>
+</form>
+<script>
+function toadd() {
+    var a = "101,104,103,102";
+    $("#answerwqbid").val(a);
+    var ajax_data = $("#form1").serialize();
+}
+function noSubmit() {
+    var a = "101,104,103,102";
+    $("#answerwqbid").val(a);
+}
+</script>
+</body></html>

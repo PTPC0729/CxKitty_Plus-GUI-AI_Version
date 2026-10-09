@@ -1,0 +1,44 @@
+# Public defaults only. Copy to config.yml if needed, or save settings in the GUI.
+# Account sessions and API keys are stored separately and must never be committed.
+multiSession: true
+sessionPath: session/
+maskAcc: true
+tUIMaxHeight: 20
+workflow:
+  continue_courses: false
+video:
+  enable: true
+  speed: 1.0
+  wait: 15
+  report_rate: 58
+exam:
+  enable: true
+  wait: 15
+document:
+  enable: true
+  wait: 15
+searcher:
+  use: jsonFileSearcher
+  restApiSearcher:
+    url: ''
+    method: POST
+    req_field: question
+    rsp_field: $.data
+  jsonFileSearcher:
+    file_path: questions.json
+  sqliteSearcher:
+    file_path: questions.db
+    table: question
+    req_field: question
+    rsp_field: answer
+  aiSearcher:
+    url: ''
+    model: ''
+    strategy: ai_only
+    fallback: jsonFileSearcher
+    timeout: 90
+    retries: 2
+    max_tokens: 4096
+    token_parameter: max_tokens
+    cache: true
+    cache_path: ai_cache.json
